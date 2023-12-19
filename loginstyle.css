@@ -1,0 +1,86 @@
+body {
+  background-color: #d77171;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #1c1b1b; /* Set the text color */
+  font-size: 2em; /* Set the font size */
+  font-weight: bold; /* Set the font weight to bold */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Add space at the bottom for better readability */
+}
+
+table {
+  background-color: rgb(247, 245, 245);
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #1c0b0b;
+  padding: 12px;
+  text-align: left;
+}
+
+input {
+  width: 50px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.total {
+  font-weight: bold;
+}
+#filter {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style for filter button */
+#filterButton {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block; /* Ensure the button takes only the necessary width */
+  margin-left: 10px;
+}
+
+#filterContainer {
+  text-align: right;
+}
+
+#updateContainer {
+  text-align: center;
+}
+
+#filterButton:hover {
+  background-color: #45a049;
+}
+
+#updateButton {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}

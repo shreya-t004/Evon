@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="loginstyle.css" />
+  </head>
+  <body>
+    <h1>Participant Ranks</h1>
+    <!--Filter for rank-->
+    <div id="filterContainer">
+      <label for="filter">Filter:</label>
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="75">75+</option>
+        <option value="90">90+</option>
+        <option value="105">105+</option>
+        <option value="120">120+</option>
+      </select>
+      <button id="filterButton" onclick="filterData()">Apply Filter</button>
+    </div>
+
+    <div id="totalRows">Total Participants: 0</div>
+
+    <!--Table display-->
+    <table id="dataTable">
+      <tr>
+        <th><h>Name</h></th>
+        <th><h>Whatsapp Number</h></th>
+        <th><h>Event</h></th>
+        <th><h>Event Partner</h></th>
+        <th><h>Rank</h></th>
+        <th><h>Input Rank</h></th>
+      </tr>
+    </table>
+
+    <!--Update-->
+    <div id="updateContainer">
+      <button id="updateButton">Update Ranks</button>
+    </div>
+
+    <div>
+      <button id="Logout" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="loginscript.js"></script>
+  </body>
+</html>

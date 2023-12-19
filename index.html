@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Uttarakhand Sports Association</title>
+  </head>
+  <body>
+    <div class="adminLogin">
+      <button
+        class="button-style"
+        type="button"
+        onclick="openLogin()"
+        id="adminLogin"
+      >
+        Admin Login
+      </button>
+    </div>
+    <!--Admin Login Section-->
+    <div id="Login" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeLogin()">&times;</span>
+        <form
+          action="http://localhost:3000/validateLogin"
+          method="POST"
+          id="Login"
+        >
+          <div>
+            <label for="user">Username:</label>
+            <input type="text" id="user" required />
+          </div>
+          <div>
+            <label for="pass">Password:</label>
+            <input type="text" id="pass" required />
+          </div>
+          <button
+            class="button-style"
+            type="button"
+            onclick="validateLogin()"
+            id="userLogin"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!--Page content section-->
+    <header>
+      <img src="photo.png" alt="Picture" />
+      <h1>Uttarakhand Open Seniors Tennis Tournament 2023</h1>
+    </header>
+
+    <h3>9th -10th December 2023</h3>
+    <h3>Factsheet and rules:</h3>
+    <h4>
+      1) Categories : A (75+combined), B (90+ combined), C (105+ combined), D
+      (120+ combined), Lucky Doubles. This is Only Doubles Tournament.
+    </h4>
+    <h4>
+      2) Lucky Doubles Format - Any participant who loses both the matches in
+      the first round shall be considered for the draw of Lucky Doubles. Pairing
+      up logic will be decided later(Work in Progress).
+    </h4>
+    <h4>3) Age Limit is 35 years.</h4>
+    <h4>
+      4) The age of any participant shall be calculated as his running age as on
+      9th December. For example if the participant turns 34 on the 8th December,
+      he can be considered as 35.
+    </h4>
+    <h4>
+      5) One player can participate in max 2 categories (excluding lucky doubles
+      which could be the 3rd for any participant).
+    </h4>
+    <h4>
+      6) Coaches are allowed to play in Category A only. Any Individual who
+      earns via tennis coaching shall be defined as Coach.
+    </h4>
+    <h4>
+      7) Entry Fee for two events is 4500 (6000 with double sharing
+      accommodation of up to 2 days) and one event is 3000 (4500 with double
+      sharing accommodation of up to 2 days).
+    </h4>
+    <h4>
+      8) Lunch shall be provided on both days and Gala dinner on the 9th
+      December.
+    </h4>
+    <h4>
+      9) Every participant shall get Indian Tree T-Shirt, Shorts, Socks, Cap,
+      Wristband
+    </h4>
+    <h4>
+      10) Prize money for the winner team is 21000 and for the runners up team
+      is 11000. Each Semi-Finalist team shall get 4000. Total Prize money is Rs.
+      2 lacs.
+    </h4>
+    <h4>11) Last date for entry Fees is 6th December.</h4>
+    <h4>12) No entry fees shall at all be accepted after 6th December.</h4>
+    <h4>
+      13) Draws and Order of Play shall be published on the 7th December so that
+      out-stationed players can plan accordingly.
+    </h4>
+    <h4>
+      14) If any team does not turn up at scheduled time, walk-over shall be
+      given to the opponent within 15 minutes.
+    </h4>
+    <h4>15) Balls for the Tournament shall be Head Tour.</h4>
+    <h4>
+      16) For any query Please contact Tournament Director Sumit Goel (Ph.
+      9412977857)
+    </h4>
+    <h4>
+      17)
+      <a href="https://maps.app.goo.gl/fPLo9aK52WSihktY6"
+        >Location of Venue of the tournament</a
+      >
+    </h4>
+    <h4>
+      18)
+      <a href="https://maps.app.goo.gl/4VULhairmetzL4EE6"
+        >Location of Om farms where stay is arranged</a
+      >
+    </h4>
+
+    <section>
+      <button class="button-style" onclick="openApplicationForm()">
+        Apply Now
+      </button>
+    </section>
+
+    <!--Submission form at the end of the page-->
+    <div id="applicationForm" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeApplicationForm()">&times;</span>
+        <form
+          action="http://localhost:3000/saveApplication"
+          method="POST"
+          id="applicationForm"
+        >
+          <div>
+            <h3>Please fill all the required fields with '*' sign</h3>
+          </div>
+          <div>
+            <label for="name">Name: </label>
+            <span class="required">*</span>
+
+            <input type="text" id="name" required />
+          </div>
+
+          <div>
+            <label for="no">Whatsapp Number:</label>
+            <span class="required">*</span>
+
+            <input type="text" id="no" required />
+          </div>
+
+          <div>
+            <label for="dob">Date of Birth(dd-mm-yyyy):</label>
+            <span class="required">*</span>
+
+            <input type="text" id="dob" required />
+          </div>
+
+          <div>
+            <label for="city">City:</label>
+            <input type="text" id="city" />
+          </div>
+
+          <div>
+            <label for="event1">Your First Event:</label>
+            <span class="required">*</span>
+
+            <select id="event1" required>
+              <option value="">Select</option>
+              <option value="75+ Combined">75+ Combined</option>
+              <option value="90+ Combined">90+ Combined</option>
+              <option value="105+ Combined">105+ Combined</option>
+              <option value="120+ Combined">120+ Combined</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="event1pt">Name of First Event Partner:</label>
+            <input type="text" id="event1pt" />
+          </div>
+
+          <div>
+            <label for="event2">Your Second Event:</label>
+            <select id="event2">
+              <option value="">Select</option>
+              <option value="75+ Combined">75+ Combined</option>
+              <option value="90+ Combined">90+ Combined</option>
+              <option value="105+ Combined">105+ Combined</option>
+              <option value="120+ Combined">120+ Combined</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="event2pt">Name of Second Event Partner:</label>
+            <input type="text" id="event2pt" />
+          </div>
+
+          <div>
+            <label for="tshirt">Indian Tree T-Shirt Size:</label>
+            <span class="required">*</span>
+
+            <select id="tshirt" required>
+              <option value="">Select</option>
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+              <option value="X Large">X Large</option>
+              <option value="XX Large">XX Large</option>
+              <option value="XXX Large">XXX Large</option>
+              <option value="I don't need">I don't need</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="shorts">Indian Tree Shorts Size:</label>
+            <span class="required">*</span>
+
+            <select id="shorts" required>
+              <option value="">Select</option>
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+              <option value="X Large">X Large</option>
+              <option value="XX Large">XX Large</option>
+              <option value="XXX Large">XXX Large</option>
+              <option value="I don't need">I don't need</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="food">Gala Dinner Food Preference:</label>
+            <span class="required">*</span>
+
+            <select id="food" required>
+              <option value="">Select</option>
+              <option value="Non-Vegetarian">Non-Vegetarian</option>
+              <option value="Vegetarian">Vegetarian</option>
+              <option value="I won't be there for Gala Dinner">
+                I won't be there for Gala Dinner
+              </option>
+            </select>
+          </div>
+
+          <div>
+            <label for="drinks">Gala Dinner Drinks Preference:</label>
+            <select id="drinks">
+              <option value="">Select</option>
+              <option value="Whisky">Whisky</option>
+              <option value="Rum">Rum</option>
+              <option value="Beer">Beer</option>
+              <option value="I don't drink">I don't drink</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="stay"
+              >Do you want the Tournament Management to arrange for your
+              stay?</label
+            >
+            <span class="required">*</span>
+
+            <select id="stay" required>
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              >Please pay fee (4500 for 2 events, 3000 for 1 event). If you
+              opted for stay, then please pay additional 1500 rupees. The
+              payment may kindly be made in favor of Uttaranchal Tennis
+              Association (Ac.No.-77200200000230 IFSC-BARB0VJDEHR), Bank of
+              Baroda, Dehradun. Also pls share the reference id or UTR number
+              below:</label
+            >
+          </div>
+
+          <img src="qr.png" alt="QR Code for Transaction" width="700" />
+
+          <div>
+            <label for="refid">Reference ID / UTR Number:</label>
+            <span class="required">*</span>
+
+            <input type="text" id="refid" required />
+          </div>
+
+          <button
+            class="button-style"
+            type="button"
+            onclick="saveApplication()"
+            id="submit"
+          >
+            Submit
+          </button>
+
+          <button
+            class="button-style"
+            type="button"
+            onclick="updateData()"
+            id="update"
+          >
+            Update Information
+          </button>
+
+          <script></script>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
